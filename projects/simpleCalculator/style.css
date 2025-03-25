@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: cursive;
+}
+
+.calculator{
+    text-align: center;
+    max-width: 500px;
+    padding: 20px;
+}
+
+button{
+    padding: 10px, 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
