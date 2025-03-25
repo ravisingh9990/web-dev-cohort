@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: cursive;
+}
+
+.container{
+    text-align: center;
+    max-width: 500px;
+    padding: 20px;
+}
+
+#quoteDisplay{
+    font-size: 1.5em;
+    margin: 20px, 0;
+}
+
+button{
+    padding: 10px, 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
