@@ -1,0 +1,28 @@
+{
+  "name": "full-stack-project",
+  "version": "1.0.0",
+  "description": "This is a demo full stack project ",
+  "homepage": "https://github.com/ravisingh9990/web-dev-cohort#readme",
+  "bugs": {
+    "url": "https://github.com/ravisingh9990/web-dev-cohort/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravisingh9990/web-dev-cohort.git"
+  },
+  "license": "ISC",
+  "author": "Ravi Chauhan",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
