@@ -2,6 +2,9 @@ import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
 import db from './utils/db.js'
+//import all routes
+import userRoutes from './routes/user.routes.js'
+
 
 dotenv.config()
 
@@ -33,6 +36,8 @@ app.get('/contact', (req, res) => {
 
 //Connect to db
 db();
+
+app.use("/api/vi/users", userRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log(`Example app listening on port ${port}`)
