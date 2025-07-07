@@ -1,11 +1,12 @@
 import mongoose from "mongoose";
+import bcrypt from "bcryptjs";
 
 const UserSchema = new mongoose.Schema({
-    name: string,
-    email: string, 
-    password: string,
+    name: String,
+    email: String, 
+    password: String,
     role: {
-        type: string, 
+        type: String, 
         enum: ["user", "admin"],
         default: "user"
     },
@@ -14,15 +15,22 @@ const UserSchema = new mongoose.Schema({
         default: false
     },
     verificationToken: {
-        type: string
+        type: String
     },
     resetPasswordToken: {
-        type: string
+        type: String
     },
     resetPasswordExpires : {
         type: Date
     }
 }, {timestamps: true});
+
+UserSchema.pre("save", async function(next){
+    if(this.isModified("password")){
+        this.password = await bcrypt.hash(this.password, 12);
+    }
+    next();
+})
 
 const User = mongoose.model("User", UserSchema)
 
